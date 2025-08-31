@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Upload Image</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Substitue Ingredients</h1>
+            <h2>Upload a link to a recipe and state the what you want to change in the textbox. </h2>
+            <form method="POST" action="/modify">
+                <label for="recipeUrl">Recipe URL:</label>
+                <input type="url" id="recipeUrl" name="recipeUrl" required><br><br>
+            
+                <label for="substitution">Modification:</label>
+                <input type="text" id="substitution" name="substitution" placeholder="e.g. replace butter with olive oil" required><br><br>
+            
+                <button type="submit">Submit</button>
+              </form>
+        </div>
+    </body>
+
+</html>
