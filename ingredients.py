@@ -28,12 +28,8 @@ def modify():
         model="gemini-2.5-flash",
         contents=(f"Can you display the nutrition information of: {response.text}")
     )
-    styles = client.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=(f"Can you generate ccs for {nutrition_response.text}, only the ccs nothing else no extra words")
-    )
 
-    css = styles.text
+    
     modified_recipe = markdown.markdown(response.text)
     nutrition = markdown.markdown(nutrition_response.text)
 
